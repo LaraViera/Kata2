@@ -17,6 +17,11 @@ public class KATA2 {
             }
         }
 
+        for (int key : data) {
+            histogram.put(key, histogram.containsKey(key) ?
+                    histogram.get(key) + 1 : 1);
+        }
+        
         for (int key : histogram.keySet()) {
             System.out.println("El número " + key + " aparece "
                     + histogram.get(key) + " veces");
